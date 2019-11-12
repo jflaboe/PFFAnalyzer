@@ -1,0 +1,3 @@
+*.db
+pff/*
+__pycache__/*
