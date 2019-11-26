@@ -1,2 +1,2 @@
-cd "C\Program Files\PFFAnalyzer"
+cd "C:\Program Files\PFFAnalyzer"
 git pull
