@@ -6,24 +6,45 @@ Downloads PFF data weekly and also provides a UI for analyzing the PFF data
 
 You must be working on Windows in order to build the necessary development environment. 
 
+### Clone the Repo
+
+```
+git clone https://github.com/jflaboe/PFFAnalyzer.git
+cd PFFAnalyzer
+```
+
 ### IIS Setup (Internet Information Services)
 
 IIS is what allows you to run a server on your Windows machine, however it is an optional feature. In order to install IIS, please follow the tutorial at this [link](https://www.howtogeek.com/112455/how-to-install-iis-8-on-windows-8/).
 
+When you get to the step where you are turning on/off Windows features, mark the IIS dropdown as specified, but also use the dropdowns to navigate to **Internet Information Services > World Wide Web services > Application Development Features** and enable CGI
+
 ### Python installation
 
-Make sure you have Python 3.x installed. You will also need to install a few Python packages:
+Make sure you have Python 3.x installed. You will be working inside a virtual environment.
 
 ```
-pip install flask
-pip install wfastcgi
+pip install virtualenv
+
+virtualenv env
+
+.\env\Scripts\activate
+
+pip install -r requirements.txt #install known dependencies.
 ```
 
-Once you have successfully install wfastcgi, please run the following command:
+Once you've completed installing these Python dependencies, you need to enable wfastcgi:
 
 ```
 wfastcgi-enable
 ```
+
+You can disable it later using:
+
+```
+wfastcgi-disable
+```
+
 
 
 ## How it works
